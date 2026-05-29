@@ -1,0 +1,17 @@
+
+(rule
+  (alias runtest)
+
+ (deps
+   %{bin:bincaml}
+   (source_tree basil)
+    run.sh
+  )
+
+ (action
+   (no-infer (progn
+     (bash pwd)
+     (system ./run.sh)
+     (diff ../../test/cram/gtirb out/basil)
+     )))
+ )
