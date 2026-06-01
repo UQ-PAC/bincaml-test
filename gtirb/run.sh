@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for i in $(find . -iname *.gts) ; do
+for i in $(find . -iname '*.gts') ; do
   mkdir -p $(dirname $i)
   oname="out/$i-initial-gts.expected"
   mkdir -p $(dirname $oname)
