@@ -3,7 +3,7 @@ proc @main()  -> () {  }
   requires boolor(eq(0x714:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "GQL0b5TkRWCLhw9luiQEHw";
+   block %main_code { .gtirb_block = "GQL0b5TkRWCLhw9luiQEHw";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Return" } ] } [
      assume eq(0x714:bv64, $PC);
@@ -30,7 +30,7 @@ proc @_start()  -> () {  }
   requires boolor(eq(0x600:bv64, $PC))
 
 [
-   block %gtirb_1 { .gtirb_block = "UhWKObXXSl6s/oHd8yUXSA";
+   block %_start_code_1 { .gtirb_block = "UhWKObXXSl6s/oHd8yUXSA";
        .succ = [ { .address = 1472; .conditional = "false"; .direct = "true";
                .target = "stmts:bwzI2YP4Tq+mVSMqn8DLkg"; .type = "Type_Call" } ] } [
      assume eq(0x600:bv64, $PC);
@@ -47,23 +47,23 @@ proc @_start()  -> () {  }
      assert false { .opcode = "0xd2800004" };
      assert false { .opcode = "0x97ffffe5" };
      assert boolor(eq(0x5c0:bv64, $PC));
-     goto (%gtirb_2);
+     goto (%_start_ext);
    ];
-   block %gtirb_2 [
+   block %_start_ext [
      assume eq(0x5c0:bv64, $PC);
      call @FUN_5c0();
      assert boolor(eq(0x630:bv64, $PC));
-     goto (%gtirb);
+     goto (%_start_code);
    ];
-   block %gtirb { .gtirb_block = "SsesEIbeSlWeF4OGM1cwkQ";
+   block %_start_code { .gtirb_block = "SsesEIbeSlWeF4OGM1cwkQ";
        .succ = [ { .address = 1520; .conditional = "false"; .direct = "true";
                .target = "stmts:jf826cfUTaG04H6zLz48xQ"; .type = "Type_Call" } ] } [
      assume eq(0x630:bv64, $PC);
      assert false { .opcode = "0x97fffff0" };
      assert boolor(eq(0x5f0:bv64, $PC));
-     goto (%gtirb_3);
+     goto (%_start_ext_1);
    ];
-   block %gtirb_3 [
+   block %_start_ext_1 [
      assume eq(0x5f0:bv64, $PC);
      call @FUN_5f0();
      assert boolor();
@@ -74,7 +74,7 @@ proc @call_weak_fn()  -> () {  }
   requires boolor(eq(0x634:bv64, $PC))
 
 [
-   block %gtirb_1 { .gtirb_block = "a4yYM1vfTjOmx29M073Djg";
+   block %call_weak_fn_code_1 { .gtirb_block = "a4yYM1vfTjOmx29M073Djg";
        .succ = [ { .address = 1604; .conditional = "true"; .direct = "true";
                .target = "internal:TvQtA9CVTtOK/u/ZToq7qg"; .type = "Type_Branch" } ] } [
      assume eq(0x634:bv64, $PC);
@@ -82,26 +82,26 @@ proc @call_weak_fn()  -> () {  }
      assert false { .opcode = "0xf947e800" };
      assert false { .opcode = "0xb4000040" };
      assert boolor(eq(0x644:bv64, $PC));
-     goto (%gtirb);
+     goto (%call_weak_fn_code);
    ];
-   block %gtirb { .gtirb_block = "TvQtA9CVTtOK/u/ZToq7qg";
+   block %call_weak_fn_code { .gtirb_block = "TvQtA9CVTtOK/u/ZToq7qg";
        .succ = [ { .address = 1424; .conditional = "false"; .direct = "true";
                .target = "external:zEy6R9i/QDGfHyH1qU/WZQ"; .type = "Type_Return" };
            { .address = 1600; .target = "internal:olRG3blRTKGy5RuhMKceNg" } ] } [
      assume eq(0x644:bv64, $PC);
      assert false { .opcode = "0xd65f03c0" };
      assert boolor(eq(0x590:bv64, $PC), eq(0x640:bv64, $PC));
-     goto (%ret_1,%gtirb_2);
+     goto (%ret_1,%call_weak_fn_code_2);
    ];
-   block %gtirb_2 { .gtirb_block = "olRG3blRTKGy5RuhMKceNg";
+   block %call_weak_fn_code_2 { .gtirb_block = "olRG3blRTKGy5RuhMKceNg";
        .succ = [ { .address = 1504; .conditional = "false"; .direct = "true";
                .target = "stmts:invjQkknQ8Cor2hyQl1QdQ"; .type = "Type_Branch" } ] } [
      assume eq(0x640:bv64, $PC);
      assert false { .opcode = "0x17ffffe8" };
      assert boolor(eq(0x5e0:bv64, $PC));
-     goto (%gtirb_4);
+     goto (%call_weak_fn_ext_1);
    ];
-   block %gtirb_4 [
+   block %call_weak_fn_ext_1 [
      assume eq(0x5e0:bv64, $PC);
      call @.L_5e0();
      assert boolor();
@@ -113,7 +113,7 @@ proc @deregister_tm_clones()  -> () {  }
   requires boolor(eq(0x650:bv64, $PC))
 
 [
-   block %gtirb_2 { .gtirb_block = "uZXw6zlOSP63U2Xt7PVFaQ";
+   block %deregister_tm_clones_code_2 { .gtirb_block = "uZXw6zlOSP63U2Xt7PVFaQ";
        .succ = [ { .address = 1660; .conditional = "true"; .direct = "true";
                .target = "internal:rX2GstYVQa2yQdhSe9ZGxg"; .type = "Type_Branch" } ] } [
      assume eq(0x650:bv64, $PC);
@@ -124,9 +124,9 @@ proc @deregister_tm_clones()  -> () {  }
      assert false { .opcode = "0xeb00003f" };
      assert false { .opcode = "0x540000c0" };
      assert boolor(eq(0x67c:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%deregister_tm_clones_code_1);
    ];
-   block %gtirb_1 { .gtirb_block = "rX2GstYVQa2yQdhSe9ZGxg";
+   block %deregister_tm_clones_code_1 { .gtirb_block = "rX2GstYVQa2yQdhSe9ZGxg";
        .succ = [ { .address = 1780; .conditional = "false"; .direct = "true";
                .target = "external:nT1k1RqYRAKneWrXgq6+wA"; .type = "Type_Return" };
            { .address = 1652; .target = "internal:xtig7CS3RhSeT2CDg0Wz+Q" };
@@ -134,9 +134,9 @@ proc @deregister_tm_clones()  -> () {  }
      assume eq(0x67c:bv64, $PC);
      assert false { .opcode = "0xd65f03c0" };
      assert boolor(eq(0x6f4:bv64, $PC), eq(0x674:bv64, $PC), eq(0x668:bv64, $PC));
-     goto (%ret_3,%gtirb_3,%gtirb);
+     goto (%ret_3,%deregister_tm_clones_code_3,%deregister_tm_clones_code);
    ];
-   block %gtirb { .gtirb_block = "fHhCaxo8RbKbC13M0wUg6Q";
+   block %deregister_tm_clones_code { .gtirb_block = "fHhCaxo8RbKbC13M0wUg6Q";
        .succ = [ { .address = 1660; .conditional = "true"; .direct = "true";
                .target = "internal:rX2GstYVQa2yQdhSe9ZGxg"; .type = "Type_Branch" } ] } [
      assume eq(0x668:bv64, $PC);
@@ -144,9 +144,9 @@ proc @deregister_tm_clones()  -> () {  }
      assert false { .opcode = "0xf947e021" };
      assert false { .opcode = "0xb4000061" };
      assert boolor(eq(0x67c:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%deregister_tm_clones_code_1);
    ];
-   block %gtirb_3 { .gtirb_block = "xtig7CS3RhSeT2CDg0Wz+Q";
+   block %deregister_tm_clones_code_3 { .gtirb_block = "xtig7CS3RhSeT2CDg0Wz+Q";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Branch" } ] } [
      assume eq(0x674:bv64, $PC);
@@ -161,7 +161,7 @@ proc @_fini()  -> () {  }
   requires boolor(eq(0x74c:bv64, $PC))
 
 [
-   block %gtirb_1 { .gtirb_block = "vft0JoFcRdiKLz6J0QEFmA"; .succ = [  ] } [
+   block %_fini_code_1 { .gtirb_block = "vft0JoFcRdiKLz6J0QEFmA"; .succ = [  ] } [
      assume eq(0x74c:bv64, $PC);
      assert false { .opcode = "0xd503201f" };
      assert false { .opcode = "0xa9bf7bfd" };
@@ -174,7 +174,7 @@ proc @FUN_5a0()  -> () {  }
   requires boolor(eq(0x5a0:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "EKumD5O/Sm+01EvTovsUUg";
+   block %FUN_5a0_code { .gtirb_block = "EKumD5O/Sm+01EvTovsUUg";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Branch" } ] } [
      assume eq(0x5a0:bv64, $PC);
@@ -191,7 +191,7 @@ proc @_init()  -> () {  }
   requires boolor(eq(0x580:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "CZITMH9BRoSnOPBxFVGk3A";
+   block %_init_code { .gtirb_block = "CZITMH9BRoSnOPBxFVGk3A";
        .succ = [ { .address = 1588; .conditional = "false"; .direct = "true";
                .target = "stmts:a4yYM1vfTjOmx29M073Djg"; .type = "Type_Call" } ] } [
      assume eq(0x580:bv64, $PC);
@@ -200,15 +200,15 @@ proc @_init()  -> () {  }
      assert false { .opcode = "0x910003fd" };
      assert false { .opcode = "0x9400002a" };
      assert boolor(eq(0x634:bv64, $PC));
-     goto (%gtirb_2);
+     goto (%_init_ext);
    ];
-   block %gtirb_2 [
+   block %_init_ext [
      assume eq(0x634:bv64, $PC);
      call @call_weak_fn();
      assert boolor(eq(0x590:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%_init_code_1);
    ];
-   block %gtirb_1 { .gtirb_block = "zEy6R9i/QDGfHyH1qU/WZQ";
+   block %_init_code_1 { .gtirb_block = "zEy6R9i/QDGfHyH1qU/WZQ";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Return" } ] } [
      assume eq(0x590:bv64, $PC);
@@ -223,7 +223,7 @@ proc @.L_5e0()  -> () {  }
   requires boolor(eq(0x5e0:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "invjQkknQ8Cor2hyQl1QdQ";
+   block %L_5e0_code { .gtirb_block = "invjQkknQ8Cor2hyQl1QdQ";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:+PxtDjL6R76x42aYEswWow"; .type = "Type_Branch" } ] } [
      assume eq(0x5e0:bv64, $PC);
@@ -239,7 +239,7 @@ proc @FUN_5f0()  -> () {  }
   requires boolor(eq(0x5f0:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "jf826cfUTaG04H6zLz48xQ";
+   block %FUN_5f0_code { .gtirb_block = "jf826cfUTaG04H6zLz48xQ";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:WleMvA+NQwuVxfjHgly/Bg"; .type = "Type_Branch" } ] } [
      assume eq(0x5f0:bv64, $PC);
@@ -255,7 +255,7 @@ proc @__do_global_dtors_aux()  -> () {  }
   requires boolor(eq(0x6c0:bv64, $PC))
 
 [
-   block %gtirb_4 { .gtirb_block = "xO9O8neIR7mTO79907DyUQ";
+   block %__do_global_dtors_aux_code_4 { .gtirb_block = "xO9O8neIR7mTO79907DyUQ";
        .succ = [ { .address = 1788; .conditional = "true"; .direct = "true";
                .target = "internal:3TMcH/LnRxyxIokXymaIwQ"; .type = "Type_Branch" } ] } [
      assume eq(0x6c0:bv64, $PC);
@@ -266,9 +266,9 @@ proc @__do_global_dtors_aux()  -> () {  }
      assert false { .opcode = "0x3940c260" };
      assert false { .opcode = "0x35000140" };
      assert boolor(eq(0x6fc:bv64, $PC));
-     goto (%gtirb_5);
+     goto (%__do_global_dtors_aux_code_5);
    ];
-   block %gtirb_5 { .gtirb_block = "3TMcH/LnRxyxIokXymaIwQ";
+   block %__do_global_dtors_aux_code_5 { .gtirb_block = "3TMcH/LnRxyxIokXymaIwQ";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Return" };
            { .address = 1752; .target = "internal:8b7oqR4jQEWh5r9JAndaKg" } ] } [
@@ -277,9 +277,9 @@ proc @__do_global_dtors_aux()  -> () {  }
      assert false { .opcode = "0xa8c27bfd" };
      assert false { .opcode = "0xd65f03c0" };
      assert boolor(eq(0x6d8:bv64, $PC));
-     goto (%ret_5,%gtirb_6);
+     goto (%ret_5,%__do_global_dtors_aux_code_6);
    ];
-   block %gtirb_6 { .gtirb_block = "8b7oqR4jQEWh5r9JAndaKg";
+   block %__do_global_dtors_aux_code_6 { .gtirb_block = "8b7oqR4jQEWh5r9JAndaKg";
        .succ = [ { .address = 1776; .conditional = "true"; .direct = "true";
                .target = "internal:K2tubSwST0GprulLMUkHLw"; .type = "Type_Branch" } ] } [
      assume eq(0x6d8:bv64, $PC);
@@ -287,18 +287,18 @@ proc @__do_global_dtors_aux()  -> () {  }
      assert false { .opcode = "0xf947e400" };
      assert false { .opcode = "0xb4000080" };
      assert boolor(eq(0x6f0:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%__do_global_dtors_aux_code_1);
    ];
-   block %gtirb_1 { .gtirb_block = "K2tubSwST0GprulLMUkHLw";
+   block %__do_global_dtors_aux_code_1 { .gtirb_block = "K2tubSwST0GprulLMUkHLw";
        .succ = [ { .address = 1616; .conditional = "false"; .direct = "true";
                .target = "stmts:uZXw6zlOSP63U2Xt7PVFaQ"; .type = "Type_Call" };
            { .address = 1764; .target = "internal:JjJa2DHzSD2DoU75JNk/tg" } ] } [
      assume eq(0x6f0:bv64, $PC);
      assert false { .opcode = "0x97ffffd8" };
      assert boolor(eq(0x650:bv64, $PC), eq(0x6e4:bv64, $PC));
-     goto (%gtirb_8,%gtirb);
+     goto (%__do_global_dtors_aux_ext_1,%__do_global_dtors_aux_code);
    ];
-   block %gtirb { .gtirb_block = "JjJa2DHzSD2DoU75JNk/tg";
+   block %__do_global_dtors_aux_code { .gtirb_block = "JjJa2DHzSD2DoU75JNk/tg";
        .succ = [ { .address = 1488; .conditional = "false"; .direct = "true";
                .target = "stmts:ttqSs+pzRbCYE4glqJHJLw"; .type = "Type_Call" } ] } [
      assume eq(0x6e4:bv64, $PC);
@@ -306,21 +306,22 @@ proc @__do_global_dtors_aux()  -> () {  }
      assert false { .opcode = "0xf9401400" };
      assert false { .opcode = "0x97ffffb9" };
      assert boolor(eq(0x5d0:bv64, $PC));
-     goto (%gtirb_7);
+     goto (%__do_global_dtors_aux_ext);
    ];
-   block %gtirb_7 [
+   block %__do_global_dtors_aux_ext [
      assume eq(0x5d0:bv64, $PC);
      call @FUN_5d0();
      assert boolor(eq(0x6f0:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%__do_global_dtors_aux_code_1);
    ];
-   block %gtirb_8 [
+   block %__do_global_dtors_aux_ext_1 [
      assume eq(0x650:bv64, $PC);
      call @deregister_tm_clones();
      assert boolor(eq(0x6f4:bv64, $PC));
-     goto (%gtirb_3);
+     goto (%__do_global_dtors_aux_code_3);
    ];
-   block %gtirb_3 { .gtirb_block = "nT1k1RqYRAKneWrXgq6+wA"; .succ = [  ] } [
+   block %__do_global_dtors_aux_code_3 { .gtirb_block = "nT1k1RqYRAKneWrXgq6+wA";
+       .succ = [  ] } [
      assume eq(0x6f4:bv64, $PC);
      assert false { .opcode = "0x52800020" };
      assert false { .opcode = "0x3900c260" };
@@ -333,7 +334,7 @@ proc @FUN_5c0()  -> () {  }
   requires boolor(eq(0x5c0:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "bwzI2YP4Tq+mVSMqn8DLkg";
+   block %FUN_5c0_code { .gtirb_block = "bwzI2YP4Tq+mVSMqn8DLkg";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:8jFE5xvlQvC8/jOC+xuEBQ"; .type = "Type_Branch" } ] } [
      assume eq(0x5c0:bv64, $PC);
@@ -349,15 +350,15 @@ proc @frame_dummy()  -> () {  }
   requires boolor(eq(0x710:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "W92RmvLFRtOoNwfwGWUp6g";
+   block %frame_dummy_code { .gtirb_block = "W92RmvLFRtOoNwfwGWUp6g";
        .succ = [ { .address = 1664; .conditional = "false"; .direct = "true";
                .target = "stmts:yF7yS6WTSA66l+hYTv1BPA"; .type = "Type_Branch" } ] } [
      assume eq(0x710:bv64, $PC);
      assert false { .opcode = "0x17ffffdc" };
      assert boolor(eq(0x680:bv64, $PC));
-     goto (%gtirb_1);
+     goto (%frame_dummy_ext);
    ];
-   block %gtirb_1 [
+   block %frame_dummy_ext [
      assume eq(0x680:bv64, $PC);
      call @register_tm_clones();
      assert boolor();
@@ -368,7 +369,7 @@ proc @register_tm_clones()  -> () {  }
   requires boolor(eq(0x680:bv64, $PC))
 
 [
-   block %gtirb_3 { .gtirb_block = "yF7yS6WTSA66l+hYTv1BPA";
+   block %register_tm_clones_code_3 { .gtirb_block = "yF7yS6WTSA66l+hYTv1BPA";
        .succ = [ { .address = 1720; .conditional = "true"; .direct = "true";
                .target = "internal:CZxAVHFtSo6QJzsXXzveWA"; .type = "Type_Branch" } ] } [
      assume eq(0x680:bv64, $PC);
@@ -382,9 +383,9 @@ proc @register_tm_clones()  -> () {  }
      assert false { .opcode = "0x9341fc21" };
      assert false { .opcode = "0xb40000c1" };
      assert boolor(eq(0x6b8:bv64, $PC));
-     goto (%gtirb);
+     goto (%register_tm_clones_code);
    ];
-   block %gtirb { .gtirb_block = "CZxAVHFtSo6QJzsXXzveWA";
+   block %register_tm_clones_code { .gtirb_block = "CZxAVHFtSo6QJzsXXzveWA";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Return" };
            { .address = 1712; .target = "internal:/pnBFE7TSyGmU50E2XP7mA" };
@@ -392,9 +393,9 @@ proc @register_tm_clones()  -> () {  }
      assume eq(0x6b8:bv64, $PC);
      assert false { .opcode = "0xd65f03c0" };
      assert boolor(eq(0x6b0:bv64, $PC), eq(0x6a4:bv64, $PC));
-     goto (%ret_2,%gtirb_4,%gtirb_1);
+     goto (%ret_2,%register_tm_clones_code_4,%register_tm_clones_code_1);
    ];
-   block %gtirb_1 { .gtirb_block = "DYrjNLFKSTKjK7H0NpR8Eg";
+   block %register_tm_clones_code_1 { .gtirb_block = "DYrjNLFKSTKjK7H0NpR8Eg";
        .succ = [ { .address = 1720; .conditional = "true"; .direct = "true";
                .target = "internal:CZxAVHFtSo6QJzsXXzveWA"; .type = "Type_Branch" } ] } [
      assume eq(0x6a4:bv64, $PC);
@@ -402,9 +403,9 @@ proc @register_tm_clones()  -> () {  }
      assert false { .opcode = "0xf947f042" };
      assert false { .opcode = "0xb4000062" };
      assert boolor(eq(0x6b8:bv64, $PC));
-     goto (%gtirb);
+     goto (%register_tm_clones_code);
    ];
-   block %gtirb_4 { .gtirb_block = "/pnBFE7TSyGmU50E2XP7mA";
+   block %register_tm_clones_code_4 { .gtirb_block = "/pnBFE7TSyGmU50E2XP7mA";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:NPXb/UqTS5KUssvt6SOKNQ"; .type = "Type_Branch" } ] } [
      assume eq(0x6b0:bv64, $PC);
@@ -419,7 +420,7 @@ proc @FUN_5d0()  -> () {  }
   requires boolor(eq(0x5d0:bv64, $PC))
 
 [
-   block %gtirb { .gtirb_block = "ttqSs+pzRbCYE4glqJHJLw";
+   block %FUN_5d0_code { .gtirb_block = "ttqSs+pzRbCYE4glqJHJLw";
        .succ = [ { .conditional = "false"; .direct = "false";
                .target = "proxy:5uZ8dxSlQRmW4QlAPrPoMg"; .type = "Type_Branch" } ] } [
      assume eq(0x5d0:bv64, $PC);
