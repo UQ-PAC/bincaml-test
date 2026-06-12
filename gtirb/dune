@@ -1,3 +1,7 @@
+
+(include dune.inc)
+
+
 (rule
  (deps
   dune.sh
@@ -9,7 +13,7 @@
 
 (rule
  (alias runtest)
+ (deps dune.sh)
  (action
   (diff dune.inc dune.inc.gen)))
 
-(include dune.inc)

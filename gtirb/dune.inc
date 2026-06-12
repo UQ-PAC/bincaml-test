@@ -124,6 +124,41 @@
             (diff "expect/./basil/basic_assign_assign/gcc_pic/basic_assign_assign.gts-initial-gts.expected" "./basil/basic_assign_assign/gcc_pic/basic_assign_assign.gts-initial-gts.expected")
         )
 
+        ; ./basil/basicassign_gamma0/clang/basicassign_gamma0.gts
+        (progn
+            (bash "mkdir -p ./basil/basicassign_gamma0/clang")
+            (with-stdout-to "./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/clang/basicassign_gamma0.gts"))
+            (diff "expect/./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts
+        (progn
+            (bash "mkdir -p ./basil/basicassign_gamma0/clang_pic")
+            (with-stdout-to "./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts"))
+            (diff "expect/./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts
+        (progn
+            (bash "mkdir -p ./basil/basicassign_gamma0/gcc")
+            (with-stdout-to "./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts"))
+            (diff "expect/./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts
+        (progn
+            (bash "mkdir -p ./basil/basicassign_gamma0/gcc_O2")
+            (with-stdout-to "./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts"))
+            (diff "expect/./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts
+        (progn
+            (bash "mkdir -p ./basil/basicassign_gamma0/gcc_pic")
+            (with-stdout-to "./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts"))
+            (diff "expect/./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected")
+        )
+
         ; ./basil/basic_assign_increment/clang/basic_assign_increment.gts
         (progn
             (bash "mkdir -p ./basil/basic_assign_increment/clang")
@@ -157,6 +192,20 @@
             (bash "mkdir -p ./basil/basic_assign_increment/gcc_pic")
             (with-stdout-to "./basil/basic_assign_increment/gcc_pic/basic_assign_increment.gts-initial-gts.expected" (bash "./run.sh ./basil/basic_assign_increment/gcc_pic/basic_assign_increment.gts"))
             (diff "expect/./basil/basic_assign_increment/gcc_pic/basic_assign_increment.gts-initial-gts.expected" "./basil/basic_assign_increment/gcc_pic/basic_assign_increment.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicfree/clang/basicfree.gts
+        (progn
+            (bash "mkdir -p ./basil/basicfree/clang")
+            (with-stdout-to "./basil/basicfree/clang/basicfree.gts-initial-gts.expected" (bash "./run.sh ./basil/basicfree/clang/basicfree.gts"))
+            (diff "expect/./basil/basicfree/clang/basicfree.gts-initial-gts.expected" "./basil/basicfree/clang/basicfree.gts-initial-gts.expected")
+        )
+
+        ; ./basil/basicfree/gcc/basicfree.gts
+        (progn
+            (bash "mkdir -p ./basil/basicfree/gcc")
+            (with-stdout-to "./basil/basicfree/gcc/basicfree.gts-initial-gts.expected" (bash "./run.sh ./basil/basicfree/gcc/basicfree.gts"))
+            (diff "expect/./basil/basicfree/gcc/basicfree.gts-initial-gts.expected" "./basil/basicfree/gcc/basicfree.gts-initial-gts.expected")
         )
 
         ; ./basil/basic_function_call_caller/clang/basic_function_call_caller.gts
@@ -537,55 +586,6 @@
             (diff "expect/./basil/basic_sec_policy_write/gcc_pic/basic_sec_policy_write.gts-initial-gts.expected" "./basil/basic_sec_policy_write/gcc_pic/basic_sec_policy_write.gts-initial-gts.expected")
         )
 
-        ; ./basil/basicassign_gamma0/clang/basicassign_gamma0.gts
-        (progn
-            (bash "mkdir -p ./basil/basicassign_gamma0/clang")
-            (with-stdout-to "./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/clang/basicassign_gamma0.gts"))
-            (diff "expect/./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/clang/basicassign_gamma0.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts
-        (progn
-            (bash "mkdir -p ./basil/basicassign_gamma0/clang_pic")
-            (with-stdout-to "./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts"))
-            (diff "expect/./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/clang_pic/basicassign_gamma0.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts
-        (progn
-            (bash "mkdir -p ./basil/basicassign_gamma0/gcc")
-            (with-stdout-to "./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts"))
-            (diff "expect/./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc/basicassign_gamma0.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts
-        (progn
-            (bash "mkdir -p ./basil/basicassign_gamma0/gcc_O2")
-            (with-stdout-to "./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts"))
-            (diff "expect/./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc_O2/basicassign_gamma0.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts
-        (progn
-            (bash "mkdir -p ./basil/basicassign_gamma0/gcc_pic")
-            (with-stdout-to "./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected" (bash "./run.sh ./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts"))
-            (diff "expect/./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected" "./basil/basicassign_gamma0/gcc_pic/basicassign_gamma0.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicfree/clang/basicfree.gts
-        (progn
-            (bash "mkdir -p ./basil/basicfree/clang")
-            (with-stdout-to "./basil/basicfree/clang/basicfree.gts-initial-gts.expected" (bash "./run.sh ./basil/basicfree/clang/basicfree.gts"))
-            (diff "expect/./basil/basicfree/clang/basicfree.gts-initial-gts.expected" "./basil/basicfree/clang/basicfree.gts-initial-gts.expected")
-        )
-
-        ; ./basil/basicfree/gcc/basicfree.gts
-        (progn
-            (bash "mkdir -p ./basil/basicfree/gcc")
-            (with-stdout-to "./basil/basicfree/gcc/basicfree.gts-initial-gts.expected" (bash "./run.sh ./basil/basicfree/gcc/basicfree.gts"))
-            (diff "expect/./basil/basicfree/gcc/basicfree.gts-initial-gts.expected" "./basil/basicfree/gcc/basicfree.gts-initial-gts.expected")
-        )
-
         ; ./basil/cjump/clang/cjump.gts
         (progn
             (bash "mkdir -p ./basil/cjump/clang")
@@ -628,34 +628,6 @@
             (diff "expect/./basil/floatingpoint/gcc/floatingpoint.gts-initial-gts.expected" "./basil/floatingpoint/gcc/floatingpoint.gts-initial-gts.expected")
         )
 
-        ; ./basil/function/clang/function.gts
-        (progn
-            (bash "mkdir -p ./basil/function/clang")
-            (with-stdout-to "./basil/function/clang/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/clang/function.gts"))
-            (diff "expect/./basil/function/clang/function.gts-initial-gts.expected" "./basil/function/clang/function.gts-initial-gts.expected")
-        )
-
-        ; ./basil/function/clang_pic/function.gts
-        (progn
-            (bash "mkdir -p ./basil/function/clang_pic")
-            (with-stdout-to "./basil/function/clang_pic/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/clang_pic/function.gts"))
-            (diff "expect/./basil/function/clang_pic/function.gts-initial-gts.expected" "./basil/function/clang_pic/function.gts-initial-gts.expected")
-        )
-
-        ; ./basil/function/gcc/function.gts
-        (progn
-            (bash "mkdir -p ./basil/function/gcc")
-            (with-stdout-to "./basil/function/gcc/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/gcc/function.gts"))
-            (diff "expect/./basil/function/gcc/function.gts-initial-gts.expected" "./basil/function/gcc/function.gts-initial-gts.expected")
-        )
-
-        ; ./basil/function/gcc_pic/function.gts
-        (progn
-            (bash "mkdir -p ./basil/function/gcc_pic")
-            (with-stdout-to "./basil/function/gcc_pic/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/gcc_pic/function.gts"))
-            (diff "expect/./basil/function/gcc_pic/function.gts-initial-gts.expected" "./basil/function/gcc_pic/function.gts-initial-gts.expected")
-        )
-
         ; ./basil/function1/clang/function1.gts
         (progn
             (bash "mkdir -p ./basil/function1/clang")
@@ -682,6 +654,34 @@
             (bash "mkdir -p ./basil/function1/gcc_O2")
             (with-stdout-to "./basil/function1/gcc_O2/function1.gts-initial-gts.expected" (bash "./run.sh ./basil/function1/gcc_O2/function1.gts"))
             (diff "expect/./basil/function1/gcc_O2/function1.gts-initial-gts.expected" "./basil/function1/gcc_O2/function1.gts-initial-gts.expected")
+        )
+
+        ; ./basil/function/clang/function.gts
+        (progn
+            (bash "mkdir -p ./basil/function/clang")
+            (with-stdout-to "./basil/function/clang/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/clang/function.gts"))
+            (diff "expect/./basil/function/clang/function.gts-initial-gts.expected" "./basil/function/clang/function.gts-initial-gts.expected")
+        )
+
+        ; ./basil/function/clang_pic/function.gts
+        (progn
+            (bash "mkdir -p ./basil/function/clang_pic")
+            (with-stdout-to "./basil/function/clang_pic/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/clang_pic/function.gts"))
+            (diff "expect/./basil/function/clang_pic/function.gts-initial-gts.expected" "./basil/function/clang_pic/function.gts-initial-gts.expected")
+        )
+
+        ; ./basil/function/gcc/function.gts
+        (progn
+            (bash "mkdir -p ./basil/function/gcc")
+            (with-stdout-to "./basil/function/gcc/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/gcc/function.gts"))
+            (diff "expect/./basil/function/gcc/function.gts-initial-gts.expected" "./basil/function/gcc/function.gts-initial-gts.expected")
+        )
+
+        ; ./basil/function/gcc_pic/function.gts
+        (progn
+            (bash "mkdir -p ./basil/function/gcc_pic")
+            (with-stdout-to "./basil/function/gcc_pic/function.gts-initial-gts.expected" (bash "./run.sh ./basil/function/gcc_pic/function.gts"))
+            (diff "expect/./basil/function/gcc_pic/function.gts-initial-gts.expected" "./basil/function/gcc_pic/function.gts-initial-gts.expected")
         )
 
         ; ./basil/functionpointer/clang/functionpointer.gts
@@ -915,34 +915,6 @@
             (diff "expect/./basil/jumptable2/gcc_pic/jumptable2.gts-initial-gts.expected" "./basil/jumptable2/gcc_pic/jumptable2.gts-initial-gts.expected")
         )
 
-        ; ./basil/malloc_with_local/clang/malloc_with_local.gts
-        (progn
-            (bash "mkdir -p ./basil/malloc_with_local/clang")
-            (with-stdout-to "./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/clang/malloc_with_local.gts"))
-            (diff "expect/./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected")
-        )
-
-        ; ./basil/malloc_with_local/clang_O2/malloc_with_local.gts
-        (progn
-            (bash "mkdir -p ./basil/malloc_with_local/clang_O2")
-            (with-stdout-to "./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/clang_O2/malloc_with_local.gts"))
-            (diff "expect/./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected")
-        )
-
-        ; ./basil/malloc_with_local/gcc/malloc_with_local.gts
-        (progn
-            (bash "mkdir -p ./basil/malloc_with_local/gcc")
-            (with-stdout-to "./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/gcc/malloc_with_local.gts"))
-            (diff "expect/./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected")
-        )
-
-        ; ./basil/malloc_with_local/gcc_O2/malloc_with_local.gts
-        (progn
-            (bash "mkdir -p ./basil/malloc_with_local/gcc_O2")
-            (with-stdout-to "./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/gcc_O2/malloc_with_local.gts"))
-            (diff "expect/./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected")
-        )
-
         ; ./basil/malloc_with_local2/clang/malloc_with_local2.gts
         (progn
             (bash "mkdir -p ./basil/malloc_with_local2/clang")
@@ -976,6 +948,34 @@
             (bash "mkdir -p ./basil/malloc_with_local3/gcc_O2")
             (with-stdout-to "./basil/malloc_with_local3/gcc_O2/malloc_with_local3.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local3/gcc_O2/malloc_with_local3.gts"))
             (diff "expect/./basil/malloc_with_local3/gcc_O2/malloc_with_local3.gts-initial-gts.expected" "./basil/malloc_with_local3/gcc_O2/malloc_with_local3.gts-initial-gts.expected")
+        )
+
+        ; ./basil/malloc_with_local/clang/malloc_with_local.gts
+        (progn
+            (bash "mkdir -p ./basil/malloc_with_local/clang")
+            (with-stdout-to "./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/clang/malloc_with_local.gts"))
+            (diff "expect/./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/clang/malloc_with_local.gts-initial-gts.expected")
+        )
+
+        ; ./basil/malloc_with_local/clang_O2/malloc_with_local.gts
+        (progn
+            (bash "mkdir -p ./basil/malloc_with_local/clang_O2")
+            (with-stdout-to "./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/clang_O2/malloc_with_local.gts"))
+            (diff "expect/./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/clang_O2/malloc_with_local.gts-initial-gts.expected")
+        )
+
+        ; ./basil/malloc_with_local/gcc/malloc_with_local.gts
+        (progn
+            (bash "mkdir -p ./basil/malloc_with_local/gcc")
+            (with-stdout-to "./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/gcc/malloc_with_local.gts"))
+            (diff "expect/./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/gcc/malloc_with_local.gts-initial-gts.expected")
+        )
+
+        ; ./basil/malloc_with_local/gcc_O2/malloc_with_local.gts
+        (progn
+            (bash "mkdir -p ./basil/malloc_with_local/gcc_O2")
+            (with-stdout-to "./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected" (bash "./run.sh ./basil/malloc_with_local/gcc_O2/malloc_with_local.gts"))
+            (diff "expect/./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected" "./basil/malloc_with_local/gcc_O2/malloc_with_local.gts-initial-gts.expected")
         )
 
         ; ./basil/multi_malloc/clang/multi_malloc.gts
@@ -1062,13 +1062,6 @@
             (diff "expect/./basil/no_interference_update_y/gcc_pic/no_interference_update_y.gts-initial-gts.expected" "./basil/no_interference_update_y/gcc_pic/no_interference_update_y.gts-initial-gts.expected")
         )
 
-        ; ./basil/secret_write/clang/secret_write.gts
-        (progn
-            (bash "mkdir -p ./basil/secret_write/clang")
-            (with-stdout-to "./basil/secret_write/clang/secret_write.gts-initial-gts.expected" (bash "./run.sh ./basil/secret_write/clang/secret_write.gts"))
-            (diff "expect/./basil/secret_write/clang/secret_write.gts-initial-gts.expected" "./basil/secret_write/clang/secret_write.gts-initial-gts.expected")
-        )
-
         ; ./basil/secret_write/clang_O2/secret_write.gts
         (progn
             (bash "mkdir -p ./basil/secret_write/clang_O2")
@@ -1083,11 +1076,11 @@
             (diff "expect/./basil/secret_write/clang_pic/secret_write.gts-initial-gts.expected" "./basil/secret_write/clang_pic/secret_write.gts-initial-gts.expected")
         )
 
-        ; ./basil/secret_write/gcc/secret_write.gts
+        ; ./basil/secret_write/clang/secret_write.gts
         (progn
-            (bash "mkdir -p ./basil/secret_write/gcc")
-            (with-stdout-to "./basil/secret_write/gcc/secret_write.gts-initial-gts.expected" (bash "./run.sh ./basil/secret_write/gcc/secret_write.gts"))
-            (diff "expect/./basil/secret_write/gcc/secret_write.gts-initial-gts.expected" "./basil/secret_write/gcc/secret_write.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/secret_write/clang")
+            (with-stdout-to "./basil/secret_write/clang/secret_write.gts-initial-gts.expected" (bash "./run.sh ./basil/secret_write/clang/secret_write.gts"))
+            (diff "expect/./basil/secret_write/clang/secret_write.gts-initial-gts.expected" "./basil/secret_write/clang/secret_write.gts-initial-gts.expected")
         )
 
         ; ./basil/secret_write/gcc_O2/secret_write.gts
@@ -1104,11 +1097,11 @@
             (diff "expect/./basil/secret_write/gcc_pic/secret_write.gts-initial-gts.expected" "./basil/secret_write/gcc_pic/secret_write.gts-initial-gts.expected")
         )
 
-        ; ./basil/switch/clang/switch.gts
+        ; ./basil/secret_write/gcc/secret_write.gts
         (progn
-            (bash "mkdir -p ./basil/switch/clang")
-            (with-stdout-to "./basil/switch/clang/switch.gts-initial-gts.expected" (bash "./run.sh ./basil/switch/clang/switch.gts"))
-            (diff "expect/./basil/switch/clang/switch.gts-initial-gts.expected" "./basil/switch/clang/switch.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/secret_write/gcc")
+            (with-stdout-to "./basil/secret_write/gcc/secret_write.gts-initial-gts.expected" (bash "./run.sh ./basil/secret_write/gcc/secret_write.gts"))
+            (diff "expect/./basil/secret_write/gcc/secret_write.gts-initial-gts.expected" "./basil/secret_write/gcc/secret_write.gts-initial-gts.expected")
         )
 
         ; ./basil/switch/clang_O2/switch.gts
@@ -1118,11 +1111,11 @@
             (diff "expect/./basil/switch/clang_O2/switch.gts-initial-gts.expected" "./basil/switch/clang_O2/switch.gts-initial-gts.expected")
         )
 
-        ; ./basil/switch/gcc/switch.gts
+        ; ./basil/switch/clang/switch.gts
         (progn
-            (bash "mkdir -p ./basil/switch/gcc")
-            (with-stdout-to "./basil/switch/gcc/switch.gts-initial-gts.expected" (bash "./run.sh ./basil/switch/gcc/switch.gts"))
-            (diff "expect/./basil/switch/gcc/switch.gts-initial-gts.expected" "./basil/switch/gcc/switch.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/switch/clang")
+            (with-stdout-to "./basil/switch/clang/switch.gts-initial-gts.expected" (bash "./run.sh ./basil/switch/clang/switch.gts"))
+            (diff "expect/./basil/switch/clang/switch.gts-initial-gts.expected" "./basil/switch/clang/switch.gts-initial-gts.expected")
         )
 
         ; ./basil/switch/gcc_O2/switch.gts
@@ -1132,11 +1125,11 @@
             (diff "expect/./basil/switch/gcc_O2/switch.gts-initial-gts.expected" "./basil/switch/gcc_O2/switch.gts-initial-gts.expected")
         )
 
-        ; ./basil/syscall/clang/syscall.gts
+        ; ./basil/switch/gcc/switch.gts
         (progn
-            (bash "mkdir -p ./basil/syscall/clang")
-            (with-stdout-to "./basil/syscall/clang/syscall.gts-initial-gts.expected" (bash "./run.sh ./basil/syscall/clang/syscall.gts"))
-            (diff "expect/./basil/syscall/clang/syscall.gts-initial-gts.expected" "./basil/syscall/clang/syscall.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/switch/gcc")
+            (with-stdout-to "./basil/switch/gcc/switch.gts-initial-gts.expected" (bash "./run.sh ./basil/switch/gcc/switch.gts"))
+            (diff "expect/./basil/switch/gcc/switch.gts-initial-gts.expected" "./basil/switch/gcc/switch.gts-initial-gts.expected")
         )
 
         ; ./basil/syscall/clang_O2/syscall.gts
@@ -1146,11 +1139,11 @@
             (diff "expect/./basil/syscall/clang_O2/syscall.gts-initial-gts.expected" "./basil/syscall/clang_O2/syscall.gts-initial-gts.expected")
         )
 
-        ; ./basil/syscall/gcc/syscall.gts
+        ; ./basil/syscall/clang/syscall.gts
         (progn
-            (bash "mkdir -p ./basil/syscall/gcc")
-            (with-stdout-to "./basil/syscall/gcc/syscall.gts-initial-gts.expected" (bash "./run.sh ./basil/syscall/gcc/syscall.gts"))
-            (diff "expect/./basil/syscall/gcc/syscall.gts-initial-gts.expected" "./basil/syscall/gcc/syscall.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/syscall/clang")
+            (with-stdout-to "./basil/syscall/clang/syscall.gts-initial-gts.expected" (bash "./run.sh ./basil/syscall/clang/syscall.gts"))
+            (diff "expect/./basil/syscall/clang/syscall.gts-initial-gts.expected" "./basil/syscall/clang/syscall.gts-initial-gts.expected")
         )
 
         ; ./basil/syscall/gcc_O2/syscall.gts
@@ -1160,11 +1153,11 @@
             (diff "expect/./basil/syscall/gcc_O2/syscall.gts-initial-gts.expected" "./basil/syscall/gcc_O2/syscall.gts-initial-gts.expected")
         )
 
-        ; ./basil/using_gamma_conditional/clang/using_gamma_conditional.gts
+        ; ./basil/syscall/gcc/syscall.gts
         (progn
-            (bash "mkdir -p ./basil/using_gamma_conditional/clang")
-            (with-stdout-to "./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_conditional/clang/using_gamma_conditional.gts"))
-            (diff "expect/./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/syscall/gcc")
+            (with-stdout-to "./basil/syscall/gcc/syscall.gts-initial-gts.expected" (bash "./run.sh ./basil/syscall/gcc/syscall.gts"))
+            (diff "expect/./basil/syscall/gcc/syscall.gts-initial-gts.expected" "./basil/syscall/gcc/syscall.gts-initial-gts.expected")
         )
 
         ; ./basil/using_gamma_conditional/clang_O2/using_gamma_conditional.gts
@@ -1181,11 +1174,11 @@
             (diff "expect/./basil/using_gamma_conditional/clang_pic/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/clang_pic/using_gamma_conditional.gts-initial-gts.expected")
         )
 
-        ; ./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts
+        ; ./basil/using_gamma_conditional/clang/using_gamma_conditional.gts
         (progn
-            (bash "mkdir -p ./basil/using_gamma_conditional/gcc")
-            (with-stdout-to "./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts"))
-            (diff "expect/./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/using_gamma_conditional/clang")
+            (with-stdout-to "./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_conditional/clang/using_gamma_conditional.gts"))
+            (diff "expect/./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/clang/using_gamma_conditional.gts-initial-gts.expected")
         )
 
         ; ./basil/using_gamma_conditional/gcc_pic/using_gamma_conditional.gts
@@ -1195,11 +1188,11 @@
             (diff "expect/./basil/using_gamma_conditional/gcc_pic/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/gcc_pic/using_gamma_conditional.gts-initial-gts.expected")
         )
 
-        ; ./basil/using_gamma_write_z/clang/using_gamma_write_z.gts
+        ; ./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts
         (progn
-            (bash "mkdir -p ./basil/using_gamma_write_z/clang")
-            (with-stdout-to "./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_write_z/clang/using_gamma_write_z.gts"))
-            (diff "expect/./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/using_gamma_conditional/gcc")
+            (with-stdout-to "./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts"))
+            (diff "expect/./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected" "./basil/using_gamma_conditional/gcc/using_gamma_conditional.gts-initial-gts.expected")
         )
 
         ; ./basil/using_gamma_write_z/clang_pic/using_gamma_write_z.gts
@@ -1209,11 +1202,11 @@
             (diff "expect/./basil/using_gamma_write_z/clang_pic/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/clang_pic/using_gamma_write_z.gts-initial-gts.expected")
         )
 
-        ; ./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts
+        ; ./basil/using_gamma_write_z/clang/using_gamma_write_z.gts
         (progn
-            (bash "mkdir -p ./basil/using_gamma_write_z/gcc")
-            (with-stdout-to "./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts"))
-            (diff "expect/./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected")
+            (bash "mkdir -p ./basil/using_gamma_write_z/clang")
+            (with-stdout-to "./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_write_z/clang/using_gamma_write_z.gts"))
+            (diff "expect/./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/clang/using_gamma_write_z.gts-initial-gts.expected")
         )
 
         ; ./basil/using_gamma_write_z/gcc_O2/using_gamma_write_z.gts
@@ -1228,6 +1221,13 @@
             (bash "mkdir -p ./basil/using_gamma_write_z/gcc_pic")
             (with-stdout-to "./basil/using_gamma_write_z/gcc_pic/using_gamma_write_z.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_write_z/gcc_pic/using_gamma_write_z.gts"))
             (diff "expect/./basil/using_gamma_write_z/gcc_pic/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/gcc_pic/using_gamma_write_z.gts-initial-gts.expected")
+        )
+
+        ; ./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts
+        (progn
+            (bash "mkdir -p ./basil/using_gamma_write_z/gcc")
+            (with-stdout-to "./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected" (bash "./run.sh ./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts"))
+            (diff "expect/./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected" "./basil/using_gamma_write_z/gcc/using_gamma_write_z.gts-initial-gts.expected")
         )
 
     )
