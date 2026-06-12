@@ -1,6 +1,6 @@
 ; CHC invariant-inference snapshot suite.
 ;
-; This suite runs a CHC solve (up to 30s) plus a Boogie run for every .il input,
+; This suite runs a CHC solve (up to 10s) plus a Boogie run for every .il input,
 ; so it is intentionally NOT wired into the default `runtest` alias. Run it on
 ; demand with:
 ;
