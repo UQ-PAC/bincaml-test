@@ -1,3 +1,5 @@
+(load-gtirb ./basil/ifbranches/clang_O2/ifbranches.gts)
+(dump-il)
 var $PC:bv64;
 proc @_fini()  -> () {  }
   requires boolor(eq(0x724:bv64, $PC))

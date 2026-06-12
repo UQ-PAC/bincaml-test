@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_arrays_read/clang_pic/basic_arrays_read.gts)
+(dump-il)
 var $PC:bv64;
 proc @FUN_600()  -> () {  }
   requires boolor(eq(0x600:bv64, $PC))

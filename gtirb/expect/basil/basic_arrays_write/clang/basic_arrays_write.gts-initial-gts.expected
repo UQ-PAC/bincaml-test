@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_arrays_write/clang/basic_arrays_write.gts)
+(dump-il)
 var $PC:bv64;
 proc @FUN_5a0()  -> () {  }
   requires boolor(eq(0x5a0:bv64, $PC))

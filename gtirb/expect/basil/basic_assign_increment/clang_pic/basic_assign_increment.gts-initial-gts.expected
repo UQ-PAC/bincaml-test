@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_assign_increment/clang_pic/basic_assign_increment.gts)
+(dump-il)
 var $PC:bv64;
 proc @_init()  -> () {  }
   requires boolor(eq(0x598:bv64, $PC))

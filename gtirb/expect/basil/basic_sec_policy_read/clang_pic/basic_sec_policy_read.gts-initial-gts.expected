@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_sec_policy_read/clang_pic/basic_sec_policy_read.gts)
+(dump-il)
 var $PC:bv64;
 proc @register_tm_clones()  -> () {  }
   requires boolor(eq(0x6c0:bv64, $PC))

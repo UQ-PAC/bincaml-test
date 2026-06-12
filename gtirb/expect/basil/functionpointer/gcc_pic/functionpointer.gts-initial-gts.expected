@@ -1,3 +1,5 @@
+(load-gtirb ./basil/functionpointer/gcc_pic/functionpointer.gts)
+(dump-il)
 var $PC:bv64;
 proc @set_seven()  -> () {  }
   requires boolor(eq(0x7c4:bv64, $PC))

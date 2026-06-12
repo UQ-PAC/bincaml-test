@@ -1,3 +1,5 @@
+(load-gtirb ./basil/function1/gcc/function1.gts)
+(dump-il)
 var $PC:bv64;
 proc @FUN_5d0()  -> () {  }
   requires boolor(eq(0x5d0:bv64, $PC))

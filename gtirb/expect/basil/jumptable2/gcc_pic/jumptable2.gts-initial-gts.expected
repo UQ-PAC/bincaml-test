@@ -1,3 +1,5 @@
+(load-gtirb ./basil/jumptable2/gcc_pic/jumptable2.gts)
+(dump-il)
 var $PC:bv64;
 proc @add_six()  -> () {  }
   requires boolor(eq(0x7b8:bv64, $PC))

@@ -1,3 +1,5 @@
+(load-gtirb ./basil/using_gamma_conditional/clang_pic/using_gamma_conditional.gts)
+(dump-il)
 var $PC:bv64;
 proc @_start()  -> () {  }
   requires boolor(eq(0x640:bv64, $PC))

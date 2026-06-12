@@ -1,3 +1,5 @@
+(load-gtirb ./basil/malloc_with_local3/gcc/malloc_with_local3.gts)
+(dump-il)
 var $PC:bv64;
 proc @frame_dummy()  -> () {  }
   requires boolor(eq(0x810:bv64, $PC))

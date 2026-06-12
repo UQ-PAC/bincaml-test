@@ -1,3 +1,5 @@
+(load-gtirb ./basil/jumptable2/gcc/jumptable2.gts)
+(dump-il)
 var $PC:bv64;
 proc @sub_seven()  -> () {  }
   requires boolor(eq(0x79c:bv64, $PC))

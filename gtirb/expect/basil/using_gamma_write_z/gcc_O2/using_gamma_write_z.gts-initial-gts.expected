@@ -1,3 +1,5 @@
+(load-gtirb ./basil/using_gamma_write_z/gcc_O2/using_gamma_write_z.gts)
+(dump-il)
 var $PC:bv64;
 proc @_start()  -> () {  }
   requires boolor(eq(0x640:bv64, $PC))

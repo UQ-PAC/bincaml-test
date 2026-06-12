@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_assign_increment/gcc_O2/basic_assign_increment.gts)
+(dump-il)
 var $PC:bv64;
 proc @deregister_tm_clones()  -> () {  }
   requires boolor(eq(0x690:bv64, $PC))

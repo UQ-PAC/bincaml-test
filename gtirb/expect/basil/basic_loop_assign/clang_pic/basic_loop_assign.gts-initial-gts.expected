@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_loop_assign/clang_pic/basic_loop_assign.gts)
+(dump-il)
 var $PC:bv64;
 proc @register_tm_clones()  -> () {  }
   requires boolor(eq(0x6c0:bv64, $PC))

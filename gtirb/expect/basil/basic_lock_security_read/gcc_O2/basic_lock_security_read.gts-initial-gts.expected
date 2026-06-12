@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_lock_security_read/gcc_O2/basic_lock_security_read.gts)
+(dump-il)
 var $PC:bv64;
 proc @main()  -> () {  }
   requires boolor(eq(0x600:bv64, $PC))

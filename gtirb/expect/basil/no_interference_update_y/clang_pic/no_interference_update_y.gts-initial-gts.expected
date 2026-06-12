@@ -1,3 +1,5 @@
+(load-gtirb ./basil/no_interference_update_y/clang_pic/no_interference_update_y.gts)
+(dump-il)
 var $PC:bv64;
 proc @FUN_5b0()  -> () {  }
   requires boolor(eq(0x5b0:bv64, $PC))

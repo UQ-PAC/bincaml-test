@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basicfree/clang/basicfree.gts)
+(dump-il)
 var $PC:bv64;
 proc @_fini()  -> () {  }
   requires boolor(eq(0x80c:bv64, $PC))

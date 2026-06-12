@@ -1,3 +1,5 @@
+(load-gtirb ./basil/initialisation/clang_O2/initialisation.gts)
+(dump-il)
 var $PC:bv64;
 proc @_start()  -> () {  }
   requires boolor(eq(0x600:bv64, $PC))

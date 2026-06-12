@@ -1,3 +1,5 @@
+(load-gtirb ./basil/indirect_call/gcc_pic/indirect_call.gts)
+(dump-il)
 var $PC:bv64;
 proc @_start()  -> () {  }
   requires boolor(eq(0x680:bv64, $PC))

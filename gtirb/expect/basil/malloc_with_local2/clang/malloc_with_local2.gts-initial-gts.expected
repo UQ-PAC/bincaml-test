@@ -1,3 +1,5 @@
+(load-gtirb ./basil/malloc_with_local2/clang/malloc_with_local2.gts)
+(dump-il)
 var $PC:bv64;
 proc @_fini()  -> () {  }
   requires boolor(eq(0x8e0:bv64, $PC))

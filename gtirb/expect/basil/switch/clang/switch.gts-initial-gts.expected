@@ -1,3 +1,5 @@
+(load-gtirb ./basil/switch/clang/switch.gts)
+(dump-il)
 var $PC:bv64;
 proc @__do_global_dtors_aux()  -> () {  }
   requires boolor(eq(0x6c0:bv64, $PC))

@@ -1,3 +1,5 @@
+(load-gtirb ./basil/multi_malloc/clang/multi_malloc.gts)
+(dump-il)
 var $PC:bv64;
 proc @_init()  -> () {  }
   requires boolor(eq(0x628:bv64, $PC))

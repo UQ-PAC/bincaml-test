@@ -1,3 +1,5 @@
+(load-gtirb ./basil/using_gamma_conditional/clang_O2/using_gamma_conditional.gts)
+(dump-il)
 var $PC:bv64;
 proc @deregister_tm_clones()  -> () {  }
   requires boolor(eq(0x650:bv64, $PC))

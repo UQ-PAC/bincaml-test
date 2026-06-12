@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_function_call_caller/gcc/basic_function_call_caller.gts)
+(dump-il)
 var $PC:bv64;
 proc @main()  -> () {  }
   requires boolor(eq(0x71c:bv64, $PC))

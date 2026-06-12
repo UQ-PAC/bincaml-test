@@ -1,3 +1,5 @@
+(load-gtirb ./basil/basic_operation_evaluation/gcc/basic_operation_evaluation.gts)
+(dump-il)
 var $PC:bv64;
 proc @call_weak_fn()  -> () {  }
   requires boolor(eq(0x634:bv64, $PC))
