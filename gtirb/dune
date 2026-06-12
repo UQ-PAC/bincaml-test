@@ -1,12 +1,21 @@
+
+(rule
+ (deps
+   dune.sh
+  (source_tree basil)
+ )
+ (action
+  (with-stdout-to
+    dune.inc.gen
+    (system ./dune.sh)))
+)
+
+
 (rule
  (alias runtest)
- (deps
-  %{bin:bincaml}
-  (source_tree basil)
-  run.sh)
- (action
-  (no-infer
-   (progn
-    (bash pwd)
-    (system ./run.sh)
-    (diff basil.expect out/basil)))))
+ (action (diff dune.inc dune.inc.gen))
+)
+
+
+
+(include dune.inc)

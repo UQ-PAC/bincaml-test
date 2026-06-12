@@ -1,0 +1,2 @@
+[{"pid":68571,"name":"process_name","ph":"M","args": {"name":"main"}},
+{"pid":68571,"tid": 0,"name":"thread_name","ph":"M","args": {"name":"t1"}}]
