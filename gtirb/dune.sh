@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 
@@ -19,18 +18,12 @@ cat << EOF
 EOF
 
 echo "    (concurrent"
-for i in $(find . -iname '*.gts' | sort -g -s) ; do
+for i in $(find . -iname '*.gts' | sort -g -s | uniq) ; do
   oname="$i-initial-gts.expected"
-  scriptfile="$i-script"
   mkdir -p $(dirname $oname)
-  echo "; $i"
-  cat << EOF > $scriptfile
-(load-gtirb $i)
-; (run-transforms trim-unreachable-proc)
-(dump-il)
-EOF
 
   cat << EOF
+        ; $i
         (progn
             (bash "mkdir -p $(dirname $oname)")
             (with-stdout-to "$oname" (bash "./run.sh $i"))
