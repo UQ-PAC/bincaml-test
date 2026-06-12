@@ -19,7 +19,7 @@ cat << EOF
 EOF
 
 echo "    (concurrent"
-for i in $(find . -iname '*.gts' | sort) ; do
+for i in $(find . -iname '*.gts' | sort -g -s) ; do
   oname="$i-initial-gts.expected"
   scriptfile="$i-script"
   mkdir -p $(dirname $oname)
