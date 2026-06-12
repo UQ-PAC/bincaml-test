@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/dagger/bk-nat/gcc_O2/bk-nat-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 27 predicates and 43 clauses to solver
+bincaml: [WARNING] Solver returned unsat — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/dagger/bk-nat/gcc_O2/bk-nat-output.bpl)

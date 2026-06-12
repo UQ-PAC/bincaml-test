@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loop-zilu/benchmark35_linear/gcc_O2/benchmark35_linear-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 7 predicates and 11 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 7 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loop-zilu/benchmark35_linear/gcc_O2/benchmark35_linear-output.bpl)

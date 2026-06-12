@@ -1,0 +1,4 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/svcomp/for_infinite_loop_1_true/gcc_O2/for_infinite_loop_1_true-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: (run-transforms ssa chc-infer-invariants dynamic-single-assignment): [31mFailure("not found: #nondet_32_1:bv32 likely a read-uninitialised variable")[0m
+         

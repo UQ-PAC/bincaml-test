@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/invgen/sendmail-mime-fromqp/gcc_O2/sendmail-mime-fromqp-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 33 predicates and 52 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 33 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/invgen/sendmail-mime-fromqp/gcc_O2/sendmail-mime-fromqp-output.bpl)

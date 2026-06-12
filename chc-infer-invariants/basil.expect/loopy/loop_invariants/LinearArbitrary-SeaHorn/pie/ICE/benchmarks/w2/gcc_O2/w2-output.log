@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/w2/gcc_O2/w2-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 15 predicates and 22 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 15 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/w2/gcc_O2/w2-output.bpl)

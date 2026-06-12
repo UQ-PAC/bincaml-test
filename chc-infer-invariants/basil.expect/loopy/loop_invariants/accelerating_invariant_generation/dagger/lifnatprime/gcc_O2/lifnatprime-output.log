@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/dagger/lifnatprime/gcc_O2/lifnatprime-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 61 predicates and 91 clauses to solver
+bincaml: [WARNING] Solver returned unknown — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/dagger/lifnatprime/gcc_O2/lifnatprime-output.bpl)

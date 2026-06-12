@@ -1,0 +1,46 @@
+// Source: data/benchmarks/code2inv/18.c
+ 
+volatile int __NONDET_INT;
+
+__attribute__((noinline)) int __VERIFIER_nondet_int()
+{
+    // placeholder
+    return __NONDET_INT;
+}
+
+__attribute__((noinline)) void __VERIFIER_assume(int e)
+{
+    // placeholder
+    while (__VERIFIER_nondet_int())
+    {
+        // do nothing
+    }
+}
+
+__attribute__((noinline)) void __VERIFIER_assert(int e)
+{
+    // placeholder
+    while (__VERIFIER_nondet_int())
+    {
+        // do nothing
+    }
+}
+
+extern int unknown(void);
+int main() {
+  int x = 1;
+  int m = 1;
+  int n = (int)__VERIFIER_nondet_int();
+  while (x < n) {
+    if (__VERIFIER_nondet_int()) {
+      m = x;
+    }
+    x = x + 1;
+  }
+  if (n > 1) {
+    {
+      ;
+      __VERIFIER_assert((m >= 1));
+    }
+  }
+}

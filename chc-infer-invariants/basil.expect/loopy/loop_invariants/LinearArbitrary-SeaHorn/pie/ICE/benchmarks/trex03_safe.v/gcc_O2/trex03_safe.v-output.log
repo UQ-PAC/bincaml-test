@@ -1,0 +1,8 @@
+(load-il basil/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/trex03_safe.v/gcc_O2/trex03_safe.v-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 46 predicates and 64 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 46 definitions
+unk op: ite
+unk op: ite
+unk op: ite
+(dump-boogie out/bpl/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/trex03_safe.v/gcc_O2/trex03_safe.v-output.bpl)
