@@ -1,21 +1,15 @@
-
 (rule
  (deps
-   dune.sh
-  (source_tree basil)
- )
+  dune.sh
+  (source_tree basil))
  (action
   (with-stdout-to
-    dune.inc.gen
-    (system ./dune.sh)))
-)
-
+   dune.inc.gen
+   (system ./dune.sh))))
 
 (rule
  (alias runtest)
- (action (diff dune.inc dune.inc.gen))
-)
-
-
+ (action
+  (diff dune.inc dune.inc.gen)))
 
 (include dune.inc)
