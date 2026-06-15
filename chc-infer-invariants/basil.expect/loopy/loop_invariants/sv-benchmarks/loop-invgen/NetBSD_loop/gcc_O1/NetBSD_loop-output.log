@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loop-invgen/NetBSD_loop/gcc_O1/NetBSD_loop-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 12 predicates and 16 clauses to solver
+bincaml: [WARNING] Solver returned unknown — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loop-invgen/NetBSD_loop/gcc_O1/NetBSD_loop-output.bpl)

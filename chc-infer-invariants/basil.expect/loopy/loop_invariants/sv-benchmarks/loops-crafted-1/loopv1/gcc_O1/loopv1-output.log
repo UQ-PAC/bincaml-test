@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loops-crafted-1/loopv1/gcc_O1/loopv1-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 22 predicates and 28 clauses to solver
+bincaml: [WARNING] Solver returned unknown — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loops-crafted-1/loopv1/gcc_O1/loopv1-output.bpl)

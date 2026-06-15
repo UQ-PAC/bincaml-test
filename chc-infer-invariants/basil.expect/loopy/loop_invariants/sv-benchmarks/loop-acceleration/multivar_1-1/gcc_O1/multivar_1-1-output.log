@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loop-acceleration/multivar_1-1/gcc_O1/multivar_1-1-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 12 predicates and 15 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 12 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loop-acceleration/multivar_1-1/gcc_O1/multivar_1-1-output.bpl)

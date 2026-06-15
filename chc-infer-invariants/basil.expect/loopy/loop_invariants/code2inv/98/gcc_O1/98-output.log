@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/code2inv/98/gcc_O1/98-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 14 predicates and 18 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 14 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/code2inv/98/gcc_O1/98-output.bpl)
