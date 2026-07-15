@@ -2,6 +2,7 @@
 (dump-il)
 var $PC:bv64;
 proc @sub_seven()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x79c:bv64, $PC))
 
 [
@@ -25,6 +26,7 @@ proc @sub_seven()  -> () {  }
    block %ret [ return; ]
 ];
 proc @__do_global_dtors_aux()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x700:bv64, $PC))
 
 [
@@ -116,6 +118,7 @@ proc @__do_global_dtors_aux()  -> () {  }
    ]
 ];
 proc @FUN_610()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x610:bv64, $PC))
 
 [
@@ -132,6 +135,7 @@ proc @FUN_610()  -> () {  }
    ]
 ];
 proc @_init()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5c8:bv64, $PC))
 
 [
@@ -164,6 +168,7 @@ proc @_init()  -> () {  }
    block %ret [ return; ]
 ];
 proc @add_six()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x778:bv64, $PC))
 
 [
@@ -186,6 +191,7 @@ proc @add_six()  -> () {  }
    block %ret [ return; ]
 ];
 proc @_start()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x640:bv64, $PC))
 
 [
@@ -230,6 +236,7 @@ proc @_start()  -> () {  }
    ]
 ];
 proc @_fini()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x80c:bv64, $PC))
 
 [
@@ -256,6 +263,7 @@ proc @_fini()  -> () {  }
    block %ret [ return; ]
 ];
 proc @FUN_630()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x630:bv64, $PC))
 
 [
@@ -272,6 +280,7 @@ proc @FUN_630()  -> () {  }
    ]
 ];
 proc @deregister_tm_clones()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x690:bv64, $PC))
 
 [
@@ -328,6 +337,7 @@ proc @deregister_tm_clones()  -> () {  }
    ]
 ];
 proc @call_weak_fn()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x674:bv64, $PC))
 
 [
@@ -372,6 +382,7 @@ proc @call_weak_fn()  -> () {  }
    block %ret_3 [ return; ]
 ];
 proc @register_tm_clones()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x6c0:bv64, $PC))
 
 [
@@ -431,6 +442,7 @@ proc @register_tm_clones()  -> () {  }
    ]
 ];
 proc @add_two()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x754:bv64, $PC))
 
 [
@@ -453,6 +465,7 @@ proc @add_two()  -> () {  }
    block %ret [ return; ]
 ];
 proc @frame_dummy()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x750:bv64, $PC))
 
 [
@@ -473,6 +486,7 @@ proc @frame_dummy()  -> () {  }
    ]
 ];
 proc @main()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x7c0:bv64, $PC))
 
 [
@@ -544,6 +558,7 @@ proc @main()  -> () {  }
    block %ret_2 [ return; ]
 ];
 proc @FUN_5e0()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5e0:bv64, $PC))
 
 [
@@ -561,6 +576,7 @@ proc @FUN_5e0()  -> () {  }
    ]
 ];
 proc @FUN_600()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x600:bv64, $PC))
 
 [
@@ -577,6 +593,7 @@ proc @FUN_600()  -> () {  }
    ]
 ];
 proc @.L_620()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x620:bv64, $PC))
 
 [
