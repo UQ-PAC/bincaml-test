@@ -2,6 +2,7 @@
 (dump-il)
 var $PC:bv64;
 proc @call_weak_fn()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x674:bv64, $PC))
 
 [
@@ -46,6 +47,7 @@ proc @call_weak_fn()  -> () {  }
    ]
 ];
 proc @FUN_600()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x600:bv64, $PC))
 
 [
@@ -62,6 +64,7 @@ proc @FUN_600()  -> () {  }
    ]
 ];
 proc @FUN_5d0()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5d0:bv64, $PC))
 
 [
@@ -78,6 +81,7 @@ proc @FUN_5d0()  -> () {  }
    ]
 ];
 proc @_init()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x598:bv64, $PC))
 
 [
@@ -110,6 +114,7 @@ proc @_init()  -> () {  }
    block %ret [ return; ]
 ];
 proc @main()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x754:bv64, $PC))
 
 [
@@ -129,6 +134,7 @@ proc @main()  -> () {  }
    block %ret [ return; ]
 ];
 proc @_fini()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x76c:bv64, $PC))
 
 [
@@ -155,6 +161,7 @@ proc @_fini()  -> () {  }
    block %ret_1 [ return; ]
 ];
 proc @_start()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x640:bv64, $PC))
 
 [
@@ -199,6 +206,7 @@ proc @_start()  -> () {  }
    ]
 ];
 proc @frame_dummy()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x750:bv64, $PC))
 
 [
@@ -219,6 +227,7 @@ proc @frame_dummy()  -> () {  }
    ]
 ];
 proc @deregister_tm_clones()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x690:bv64, $PC))
 
 [
@@ -275,6 +284,7 @@ proc @deregister_tm_clones()  -> () {  }
    ]
 ];
 proc @FUN_5e0()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5e0:bv64, $PC))
 
 [
@@ -291,6 +301,7 @@ proc @FUN_5e0()  -> () {  }
    ]
 ];
 proc @FUN_5b0()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5b0:bv64, $PC))
 
 [
@@ -308,6 +319,7 @@ proc @FUN_5b0()  -> () {  }
    ]
 ];
 proc @__do_global_dtors_aux()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x700:bv64, $PC))
 
 [
@@ -399,6 +411,7 @@ proc @__do_global_dtors_aux()  -> () {  }
    block %ret_6 [ return; ]
 ];
 proc @.L_5f0()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x5f0:bv64, $PC))
 
 [
@@ -415,6 +428,7 @@ proc @.L_5f0()  -> () {  }
    ]
 ];
 proc @register_tm_clones()  -> () {  }
+  captures $PC:bv64
   requires boolor(eq(0x6c0:bv64, $PC))
 
 [
