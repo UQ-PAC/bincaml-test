@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/LinearArbitrary-SeaHorn/invgen/sendmail-mime7to8_arr_three_chars_no_test_ok/gcc_O2/sendmail-mime7to8_arr_three_chars_no_test_ok-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 46 predicates and 71 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 46 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/LinearArbitrary-SeaHorn/invgen/sendmail-mime7to8_arr_three_chars_no_test_ok/gcc_O2/sendmail-mime7to8_arr_three_chars_no_test_ok-output.bpl)

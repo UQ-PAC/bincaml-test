@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/LinearArbitrary-SeaHorn/VeriMAP/TRACER-testabs13_VeriMAP_true/gcc_O2/TRACER-testabs13_VeriMAP_true-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 4 predicates and 7 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 4 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/LinearArbitrary-SeaHorn/VeriMAP/TRACER-testabs13_VeriMAP_true/gcc_O2/TRACER-testabs13_VeriMAP_true-output.bpl)

@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/dagger/swim/gcc_O1/swim-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 52 predicates and 82 clauses to solver
+bincaml: [WARNING] Solver returned unknown — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/dagger/swim/gcc_O1/swim-output.bpl)

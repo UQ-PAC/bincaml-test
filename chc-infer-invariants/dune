@@ -1,0 +1,25 @@
+; CHC invariant-inference snapshot suite.
+;
+; This suite runs a CHC solve (up to 10s) plus a Boogie run for every .il input,
+; so it is intentionally NOT wired into the default `runtest` alias. Run it on
+; demand with:
+;
+;   dune build @examples/chc-infer-invariants/chc
+;
+; To (re)generate the committed snapshots in basil.expect, run with promotion:
+;
+;   dune build @examples/chc-infer-invariants/chc --auto-promote
+
+(rule
+ (alias chc)
+ (deps
+  %{bin:bincaml}
+  %{bin:z3}
+  %{bin:boogie}
+  (source_tree basil)
+  run.sh)
+ (action
+  (no-infer
+   (progn
+    (system ./run.sh)
+    (diff basil.expect out/basil)))))

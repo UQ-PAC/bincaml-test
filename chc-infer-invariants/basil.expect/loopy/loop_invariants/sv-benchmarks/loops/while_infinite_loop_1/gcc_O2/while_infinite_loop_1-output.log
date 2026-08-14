@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loops/while_infinite_loop_1/gcc_O2/while_infinite_loop_1-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 4 predicates and 5 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 4 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loops/while_infinite_loop_1/gcc_O2/while_infinite_loop_1-output.bpl)

@@ -1,0 +1,7 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/svcomp/sum01_true/gcc_O1/sum01_true-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 15 predicates and 19 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 15 definitions
+unk op: ite
+unk op: ite
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/svcomp/sum01_true/gcc_O1/sum01_true-output.bpl)

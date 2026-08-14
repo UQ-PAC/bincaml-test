@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/invgen/NetBSD_loop_int/gcc_O2/NetBSD_loop_int-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 16 predicates and 24 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 16 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/invgen/NetBSD_loop_int/gcc_O2/NetBSD_loop_int-output.bpl)

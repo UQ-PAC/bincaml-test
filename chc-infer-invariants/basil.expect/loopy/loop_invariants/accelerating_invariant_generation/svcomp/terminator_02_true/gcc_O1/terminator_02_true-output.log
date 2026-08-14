@@ -1,0 +1,11 @@
+(load-il basil/loopy/loop_invariants/accelerating_invariant_generation/svcomp/terminator_02_true/gcc_O1/terminator_02_true-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 24 predicates and 31 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 24 definitions
+unk op: ite
+unk op: ite
+unk op: ite
+unk op: ite
+unk op: ite
+unk op: ite
+(dump-boogie out/bpl/loopy/loop_invariants/accelerating_invariant_generation/svcomp/terminator_02_true/gcc_O1/terminator_02_true-output.bpl)

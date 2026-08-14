@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/code2inv/93/gcc_O2/93-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 17 predicates and 25 clauses to solver
+bincaml: [WARNING] Solver returned unknown — no invariants extracted
+(dump-boogie out/bpl/loopy/loop_invariants/code2inv/93/gcc_O2/93-output.bpl)

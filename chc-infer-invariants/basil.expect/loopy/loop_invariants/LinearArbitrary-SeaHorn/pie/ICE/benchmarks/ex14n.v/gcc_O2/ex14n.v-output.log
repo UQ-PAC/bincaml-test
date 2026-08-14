@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/ex14n.v/gcc_O2/ex14n.v-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 4 predicates and 6 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 4 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/LinearArbitrary-SeaHorn/pie/ICE/benchmarks/ex14n.v/gcc_O2/ex14n.v-output.bpl)

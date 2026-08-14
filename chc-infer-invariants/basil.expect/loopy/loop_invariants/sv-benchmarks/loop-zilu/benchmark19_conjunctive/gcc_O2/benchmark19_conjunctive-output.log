@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loop-zilu/benchmark19_conjunctive/gcc_O2/benchmark19_conjunctive-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 10 predicates and 15 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 10 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loop-zilu/benchmark19_conjunctive/gcc_O2/benchmark19_conjunctive-output.bpl)

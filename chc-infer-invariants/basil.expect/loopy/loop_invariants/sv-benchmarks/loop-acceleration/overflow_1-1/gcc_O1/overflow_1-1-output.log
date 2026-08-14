@@ -1,0 +1,5 @@
+(load-il basil/loopy/loop_invariants/sv-benchmarks/loop-acceleration/overflow_1-1/gcc_O1/overflow_1-1-output.il)
+(run-transforms ssa chc-infer-invariants dynamic-single-assignment)
+bincaml: [INFO] Submitting 9 predicates and 11 clauses to solver
+bincaml: [INFO] Solver returned sat; extracted 9 definitions
+(dump-boogie out/bpl/loopy/loop_invariants/sv-benchmarks/loop-acceleration/overflow_1-1/gcc_O1/overflow_1-1-output.bpl)
