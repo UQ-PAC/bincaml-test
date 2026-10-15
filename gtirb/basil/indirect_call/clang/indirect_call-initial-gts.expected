@@ -576,4 +576,4 @@ proc @_init()  -> () {  }
    ];
    block %ret_1 [ return; ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

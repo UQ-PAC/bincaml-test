@@ -536,4 +536,4 @@ proc @frame_dummy()  -> () {  }
      unreachable;
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

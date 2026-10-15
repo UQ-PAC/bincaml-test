@@ -638,4 +638,4 @@ proc @main()  -> () {  }
      goto (%main_ext_2);
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

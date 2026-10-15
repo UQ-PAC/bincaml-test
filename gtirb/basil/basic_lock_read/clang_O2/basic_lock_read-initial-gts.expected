@@ -508,4 +508,4 @@ proc @deregister_tm_clones()  -> () {  }
      unreachable;
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

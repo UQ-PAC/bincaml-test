@@ -609,4 +609,4 @@ proc @.L_620()  -> () {  }
      unreachable;
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

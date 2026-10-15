@@ -602,4 +602,4 @@ proc @__do_global_dtors_aux()  -> () {  }
    ];
    block %ret_6 [ return; ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

@@ -486,4 +486,4 @@ proc @call_weak_fn()  -> () {  }
      unreachable;
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

@@ -531,4 +531,4 @@ proc @__do_global_dtors_aux()  -> () {  }
      goto (%__do_global_dtors_aux_code_4);
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

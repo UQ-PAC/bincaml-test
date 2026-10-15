@@ -645,4 +645,4 @@ proc @FUN_6d0()  -> () {  }
      unreachable;
    ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };

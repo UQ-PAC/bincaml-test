@@ -526,4 +526,4 @@ proc @register_tm_clones()  -> () {  }
    ];
    block %ret_5 [ return; ]
 ];
-prog entry @_start;
+prog entry @_start { .invariants = [ "GtirbArm" ] };
