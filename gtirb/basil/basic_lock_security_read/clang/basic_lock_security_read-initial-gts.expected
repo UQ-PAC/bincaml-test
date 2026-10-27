@@ -1,9 +1,8 @@
 (load-gtirb ../../../examples/gtirb/basil/basic_lock_security_read/clang/basic_lock_security_read.gts)
 (dump-il)
 var $PC:bv64;
-var $R30:bv64;
 proc @_init()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x580:bv64, $PC))
 
 [
@@ -30,13 +29,13 @@ proc @_init()  -> () {  }
      assume eq(0x590:bv64, $PC);
      call @_aarch64_eval(0xa8c17bfd:bv32, 0x590:bv64) { .asm = "ldp x29, x30, [sp], #0x10" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x594:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret);
    ];
    block %ret [ return; ]
 ];
 proc @_fini()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x754:bv64, $PC))
 
 [
@@ -57,7 +56,7 @@ proc @_fini()  -> () {  }
      assume eq(0x760:bv64, $PC);
      call @_aarch64_eval(0xa8c17bfd:bv32, 0x760:bv64) { .asm = "ldp x29, x30, [sp], #0x10" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x764:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret_1);
    ];
    block %ret_1 [ return; ]
@@ -80,7 +79,7 @@ proc @FUN_5c0()  -> () {  }
    ]
 ];
 proc @__do_global_dtors_aux()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x6c0:bv64, $PC))
 
 [
@@ -166,13 +165,13 @@ proc @__do_global_dtors_aux()  -> () {  }
      call @_aarch64_eval(0xf9400bf3:bv32, 0x6fc:bv64) { .asm = "ldr x19, [sp, #0x10]" };
      call @_aarch64_eval(0xa8c27bfd:bv32, 0x700:bv64) { .asm = "ldp x29, x30, [sp], #0x20" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x704:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret_3);
    ];
    block %ret_3 [ return; ]
 ];
 proc @deregister_tm_clones()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x650:bv64, $PC))
 
 [
@@ -199,7 +198,7 @@ proc @deregister_tm_clones()  -> () {  }
                .target = "external:ONQDO1j5Sr6VE2TuAHRW9w"; .type = "Type_Return" } ] } [
      assume eq(0x67c:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x67c:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret);
    ];
    block %ret [ return; ];
@@ -247,7 +246,7 @@ proc @FUN_5a0()  -> () {  }
    ]
 ];
 proc @register_tm_clones()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x680:bv64, $PC))
 
 [
@@ -301,13 +300,13 @@ proc @register_tm_clones()  -> () {  }
                .target = "proxy:zyrqAWTDRIerrYGqKbB6OQ"; .type = "Type_Return" } ] } [
      assume eq(0x6b8:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x6b8:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret_5);
    ];
    block %ret_5 [ return; ]
 ];
 proc @call_weak_fn()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x634:bv64, $PC))
 
 [
@@ -346,7 +345,7 @@ proc @call_weak_fn()  -> () {  }
                .target = "external:Eo8tNiWyTJuXfgdJd/Kv0g"; .type = "Type_Return" } ] } [
      assume eq(0x644:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x644:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret_3);
    ];
    block %ret_3 [ return; ]
@@ -369,7 +368,7 @@ proc @FUN_5f0()  -> () {  }
    ]
 ];
 proc @main()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x714:bv64, $PC))
 
 [
@@ -417,7 +416,7 @@ proc @main()  -> () {  }
      call @_aarch64_eval(0xb9400be0:bv32, 0x748:bv64) { .asm = "ldr w0, [sp, #8]" };
      call @_aarch64_eval(0x910043ff:bv32, 0x74c:bv64) { .asm = "add sp, sp, #0x10" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x750:bv64) { .asm = "ret " };
-     assert boolor(eq($R30, $PC));
+     assert boolor(true);
      goto (%ret_1);
    ];
    block %ret_1 [ return; ]
@@ -440,7 +439,7 @@ proc @.L_5e0()  -> () {  }
    ]
 ];
 proc @frame_dummy()  -> () {  }
-  captures $PC:bv64, $R30:bv64
+  captures $PC:bv64
   requires boolor(eq(0x710:bv64, $PC))
 
 [
