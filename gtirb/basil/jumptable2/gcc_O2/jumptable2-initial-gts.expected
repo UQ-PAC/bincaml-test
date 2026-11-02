@@ -2,6 +2,7 @@
 (dump-il)
 var $PC:bv64;
 proc @__do_global_dtors_aux()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x740:bv64, $PC))
 
@@ -88,7 +89,7 @@ proc @__do_global_dtors_aux()  -> () {  }
    ];
    block %__do_global_dtors_aux_ext [
      assume eq(0x610:bv64, $PC);
-     call @FUN_610();
+     call @__cxa_finalize();
      assert boolor(eq(0x770:bv64, $PC));
      goto (%__do_global_dtors_aux_code);
    ]
@@ -235,41 +236,18 @@ proc @frame_dummy()  -> () {  }
      unreachable;
    ]
 ];
-proc @FUN_630()  -> () {  }
+proc @abort()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x630:bv64, $PC))
-
-[
-   block %FUN_630_code { .address = 1584; .gtirb_block = "ZVatR2XFSja+r2c4UbyONg";
-       .succ = [ { .conditional = "false"; .direct = "false";
-               .target = "proxy:s3fMbk2bS+ujda6cVQsWsg"; .type = "Type_Branch" } ] } [
-     assume eq(0x630:bv64, $PC);
-     call @_aarch64_eval(0x90000090:bv32, 0x630:bv64) { .asm = "adrp x16, #0x10000" };
-     call @_aarch64_eval(0xf947e611:bv32, 0x634:bv64) { .asm = "ldr x17, [x16, #0xfc8]" };
-     call @_aarch64_eval(0x913f2210:bv32, 0x638:bv64) { .asm = "add x16, x16, #0xfc8" };
-     call @_aarch64_eval(0xd61f0220:bv32, 0x63c:bv64) { .asm = "br x17" };
-     assert false;
-     unreachable;
-   ]
-];
-proc @FUN_610()  -> () {  }
+;
+proc @__cxa_finalize()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x610:bv64, $PC))
-
-[
-   block %FUN_610_code { .address = 1552; .gtirb_block = "AtKvCP4uS4eR1VQhW+84Xw";
-       .succ = [ { .conditional = "false"; .direct = "false";
-               .target = "proxy:rZ9OqGYrSTCnNf/RkPq95w"; .type = "Type_Branch" } ] } [
-     assume eq(0x610:bv64, $PC);
-     call @_aarch64_eval(0x90000090:bv32, 0x610:bv64) { .asm = "adrp x16, #0x10000" };
-     call @_aarch64_eval(0xf947de11:bv32, 0x614:bv64) { .asm = "ldr x17, [x16, #0xfb8]" };
-     call @_aarch64_eval(0x913ee210:bv32, 0x618:bv64) { .asm = "add x16, x16, #0xfb8" };
-     call @_aarch64_eval(0xd61f0220:bv32, 0x61c:bv64) { .asm = "br x17" };
-     assert false;
-     unreachable;
-   ]
-];
+;
 proc @_init()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x5c8:bv64, $PC))
 
@@ -302,24 +280,13 @@ proc @_init()  -> () {  }
    ];
    block %ret_1 [ return; ]
 ];
-proc @FUN_600()  -> () {  }
+proc @__libc_start_main()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x600:bv64, $PC))
-
-[
-   block %FUN_600_code { .address = 1536; .gtirb_block = "OOioDeOFQb+zTguF9cn9Ng";
-       .succ = [ { .conditional = "false"; .direct = "false";
-               .target = "proxy:TQ7Ol6HwQ/ypcCKhHtkxrw"; .type = "Type_Branch" } ] } [
-     assume eq(0x600:bv64, $PC);
-     call @_aarch64_eval(0x90000090:bv32, 0x600:bv64) { .asm = "adrp x16, #0x10000" };
-     call @_aarch64_eval(0xf947da11:bv32, 0x604:bv64) { .asm = "ldr x17, [x16, #0xfb0]" };
-     call @_aarch64_eval(0x913ec210:bv32, 0x608:bv64) { .asm = "add x16, x16, #0xfb0" };
-     call @_aarch64_eval(0xd61f0220:bv32, 0x60c:bv64) { .asm = "br x17" };
-     assert false;
-     unreachable;
-   ]
-];
+;
 proc @_start()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x680:bv64, $PC))
 
@@ -345,7 +312,7 @@ proc @_start()  -> () {  }
    ];
    block %_start_ext [
      assume eq(0x600:bv64, $PC);
-     call @FUN_600();
+     call @__libc_start_main();
      assert boolor(eq(0x6b0:bv64, $PC));
      goto (%_start_code_1);
    ];
@@ -359,7 +326,7 @@ proc @_start()  -> () {  }
    ];
    block %_start_ext_1 [
      assume eq(0x630:bv64, $PC);
-     call @FUN_630();
+     call @abort();
      assert false;
      unreachable;
    ]
@@ -425,6 +392,7 @@ proc @register_tm_clones()  -> () {  }
    ]
 ];
 proc @call_weak_fn()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x6b4:bv64, $PC))
 
@@ -464,7 +432,7 @@ proc @call_weak_fn()  -> () {  }
    ];
    block %call_weak_fn_ext_1 [
      assume eq(0x620:bv64, $PC);
-     call @.L_620();
+     call @__gmon_start__();
      assert false;
      unreachable;
    ]
@@ -576,23 +544,11 @@ proc @add_two()  -> () {  }
    ];
    block %ret [ return; ]
 ];
-proc @.L_620()  -> () {  }
+proc @__gmon_start__()  -> () {  }
+  modifies $PC:bv64
   captures $PC:bv64
   requires boolor(eq(0x620:bv64, $PC))
-
-[
-   block %L_620_code { .address = 1568; .gtirb_block = "zfwXGUgoTiuTtZzzi3FSWQ";
-       .succ = [ { .conditional = "false"; .direct = "false";
-               .target = "proxy:cl7pwjqlQqSnSvf5XQiPHA"; .type = "Type_Branch" } ] } [
-     assume eq(0x620:bv64, $PC);
-     call @_aarch64_eval(0x90000090:bv32, 0x620:bv64) { .asm = "adrp x16, #0x10000" };
-     call @_aarch64_eval(0xf947e211:bv32, 0x624:bv64) { .asm = "ldr x17, [x16, #0xfc0]" };
-     call @_aarch64_eval(0x913f0210:bv32, 0x628:bv64) { .asm = "add x16, x16, #0xfc0" };
-     call @_aarch64_eval(0xd61f0220:bv32, 0x62c:bv64) { .asm = "br x17" };
-     assert false;
-     unreachable;
-   ]
-];
+;
 prog entry @_start { .initial_memory = [ { .address = 568;
             .bytes = "/lib/ld-linux-aarch64.so.1\000"; .name = ".interp";
             .read_only = true; .size = 27 };
