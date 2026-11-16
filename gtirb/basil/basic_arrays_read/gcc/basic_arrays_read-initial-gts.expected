@@ -173,14 +173,15 @@ proc @call_weak_fn()  -> () {  }
    block %call_weak_fn_code_1 { .address = 1600;
        .gtirb_block = "r61GP7J8SoGHwDj69hqsZQ";
        .succ = [ { .address = 1504; .conditional = "false"; .direct = "true";
-               .target = "external:umzV3kTkRkqDm1wv+BpQyA"; .type = "Type_Branch" } ] } [
+               .target = "stmts:umzV3kTkRkqDm1wv+BpQyA"; .type = "Type_Branch" } ] } [
      assume eq(0x640:bv64, $PC);
      call @_aarch64_eval(0x17ffffe8:bv32, 0x640:bv64) { .asm = "b #0xffffffffffffffa0" };
      assert boolor(eq(0x5e0:bv64, $PC));
-     goto (%call_weak_fn_ext);
+     goto (%call_weak_fn_ext_2);
    ];
-   block %call_weak_fn_ext [
+   block %call_weak_fn_ext_2 [
      assume eq(0x5e0:bv64, $PC);
+     call @.L_5e0();
      assert false;
      unreachable;
    ]
@@ -232,14 +233,15 @@ proc @frame_dummy()  -> () {  }
    block %frame_dummy_code { .address = 1808;
        .gtirb_block = "/9D64Vk5R/CTx44U2/z7+g";
        .succ = [ { .address = 1664; .conditional = "false"; .direct = "true";
-               .target = "external:Gs6SgHnOTMq50/1zcriYvA"; .type = "Type_Branch" } ] } [
+               .target = "stmts:Gs6SgHnOTMq50/1zcriYvA"; .type = "Type_Branch" } ] } [
      assume eq(0x710:bv64, $PC);
      call @_aarch64_eval(0x17ffffdc:bv32, 0x710:bv64) { .asm = "b #0xffffffffffffff70" };
      assert boolor(eq(0x680:bv64, $PC));
-     goto (%frame_dummy_ext);
+     goto (%frame_dummy_ext_1);
    ];
-   block %frame_dummy_ext [
+   block %frame_dummy_ext_1 [
      assume eq(0x680:bv64, $PC);
+     call @register_tm_clones();
      assert false;
      unreachable;
    ]
