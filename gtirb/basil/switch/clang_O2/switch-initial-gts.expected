@@ -35,7 +35,7 @@ proc @_init()  -> () {  }
      assume eq(0x590:bv64, $PC);
      call @_aarch64_eval(0xa8c17bfd:bv32, 0x590:bv64) { .asm = "ldp x29, x30, [sp], #0x10" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x594:bv64) { .asm = "ret " };
-     assert false;
+     assert boolor(true);
      goto (%ret_1);
    ];
    block %ret_1 [ return; ]
@@ -93,7 +93,7 @@ proc @deregister_tm_clones()  -> () {  }
                .target = "external:q55XH5CVQYGAu8H0Ix6wpw"; .type = "Type_Return" } ] } [
      assume eq(0x67c:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x67c:bv64) { .asm = "ret " };
-     assert boolor(eq(0x6f4:bv64, $PC));
+     assert boolor(true);
      goto (%ret_5);
    ];
    block %ret_5 [ return; ]
@@ -134,7 +134,7 @@ proc @__do_global_dtors_aux()  -> () {  }
      call @_aarch64_eval(0xf9400bf3:bv32, 0x6fc:bv64) { .asm = "ldr x19, [sp, #0x10]" };
      call @_aarch64_eval(0xa8c27bfd:bv32, 0x700:bv64) { .asm = "ldp x29, x30, [sp], #0x20" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x704:bv64) { .asm = "ret " };
-     assert false;
+     assert boolor(true);
      goto (%ret_1);
    ];
    block %ret_1 [ return; ];
@@ -206,7 +206,7 @@ proc @main()  -> () {  }
                .target = "proxy:FOtO5zazTO6FydRnnmXkCQ"; .type = "Type_Return" } ] } [
      assume eq(0x714:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x714:bv64) { .asm = "ret " };
-     assert false;
+     assert boolor(true);
      goto (%ret);
    ];
    block %ret [ return; ]
@@ -233,7 +233,7 @@ proc @_fini()  -> () {  }
      assume eq(0x724:bv64, $PC);
      call @_aarch64_eval(0xa8c17bfd:bv32, 0x724:bv64) { .asm = "ldp x29, x30, [sp], #0x10" };
      call @_aarch64_eval(0xd65f03c0:bv32, 0x728:bv64) { .asm = "ret " };
-     assert false;
+     assert boolor(true);
      goto (%ret);
    ];
    block %ret [ return; ]
@@ -315,7 +315,7 @@ proc @register_tm_clones()  -> () {  }
                .target = "proxy:FOtO5zazTO6FydRnnmXkCQ"; .type = "Type_Return" } ] } [
      assume eq(0x6b8:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x6b8:bv64) { .asm = "ret " };
-     assert false;
+     assert boolor(true);
      goto (%ret);
    ];
    block %ret [ return; ];
@@ -386,7 +386,7 @@ proc @call_weak_fn()  -> () {  }
                .target = "external:wl2mzvo+RNmwctfQkVl1tA"; .type = "Type_Return" } ] } [
      assume eq(0x644:bv64, $PC);
      call @_aarch64_eval(0xd65f03c0:bv32, 0x644:bv64) { .asm = "ret " };
-     assert boolor(eq(0x590:bv64, $PC));
+     assert boolor(true);
      goto (%ret_3);
    ];
    block %ret_3 [ return; ]
